@@ -10,12 +10,23 @@ public class FlukGame extends NumberGame {
     private int secret;
     private int guesse;
 
+    /**
+     *
+     * @param upperBound is the max value of that can guessing.
+     */
+
     public FlukGame(int upperBound) {
         this.upperBound = upperBound;
         Random rand = new Random();
         this.secret = rand.nextInt(upperBound) + 0;
         super.setMessage("I'm thinking of a number between 0 to " + upperBound);
     }
+
+    /**
+     *
+     * @param number is the number that user guess.
+     * @return your number guess right or not
+     */
 
     @Override
     public boolean guess(int number) {
