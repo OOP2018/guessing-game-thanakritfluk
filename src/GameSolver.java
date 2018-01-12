@@ -5,6 +5,7 @@ import java.util.Random;
  */
 public class GameSolver {
 
+    Random ran =new Random();
 
     public int play (NumberGame game){
 
@@ -17,7 +18,8 @@ public class GameSolver {
         System.out.println(game.getMessage());
 
         int guess;
-        guess = game.getUpperBound();
+
+        guess = ran.nextInt(game.getUpperBound());
 
         do {
             Random rand = new Random();
@@ -28,10 +30,10 @@ public class GameSolver {
             System.out.println(game.getMessage());
 
             if (correct == true) break;
-            if (correct == false)
+            if (correct == false) {
                 if (game.getMessage().contains("too small")) guess += 3;
                 if (game.getMessage().contains("too large")) guess -= 5;
-
+            }
         } while (true);
 
         return guess;
