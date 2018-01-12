@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /** 
  *  Play guessing game on the console that have the rule you should guessing number until you guess it right.
- *  @param
+ *
  */
 public class GameConsole {
 

@@ -20,11 +20,11 @@ public class FlukGame extends NumberGame {
     @Override
     public boolean guess(int number) {
         guesse += 1;
-        if (number<0) super.setMessage("Guess number can't less than 0");
-        if (number<secret) super.setMessage("You guess is too small");
-        if (number>secret) super.setMessage("You guess is too large");
-        if (number==secret) super.setMessage("*** You win ****");
-        if (number==secret) return true;
+        if (number < 0) super.setMessage("Guess number can't less than 0");
+        if (number < secret) super.setMessage("You guess is too small");
+        if (number > secret) super.setMessage("You guess is too large");
+        if (number == secret) super.setMessage("*** You win ****");
+        if (number == secret) return true;
         else return false;
     }
 
