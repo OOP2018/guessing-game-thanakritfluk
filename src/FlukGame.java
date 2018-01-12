@@ -14,7 +14,7 @@ public class FlukGame extends NumberGame {
         this.upperBound = upperBound;
         Random rand = new Random();
         this.secret = rand.nextInt(upperBound) + 0;
-        super.setMessage("I'm thinking of a number between 1 to " + upperBound);
+        super.setMessage("I'm thinking of a number between 0 to " + upperBound);
     }
 
     @Override
