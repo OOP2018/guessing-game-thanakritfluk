@@ -10,7 +10,8 @@ public class SampleGame extends NumberGame {
     private int upperBound;
     /** the solution to the game */
     private int secret;
-    
+
+    private int guesses;
 	/** count guesses */
 //TODO add an attribute to count guesses
 
