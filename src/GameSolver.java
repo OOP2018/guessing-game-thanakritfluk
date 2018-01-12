@@ -29,8 +29,8 @@ public class GameSolver {
 
             if (correct == true) break;
             if (correct == false)
-                if (game.getMessage().equals("You guess is too small")) guess += 2;
-                if (game.getMessage().equals("You guess is too large")) guess -= 3;
+                if (game.getMessage().contains("too small")) guess += 3;
+                if (game.getMessage().contains("too large")) guess -= 5;
 
         } while (true);
 
