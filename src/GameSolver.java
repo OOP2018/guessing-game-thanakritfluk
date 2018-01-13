@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.Random;
 /**
  * Automatically find the secret to any NumberGame.
@@ -6,34 +5,30 @@ import java.util.Random;
  */
 public class GameSolver {
 
-    Random ran =new Random();
-
     public int play (NumberGame game){
 
-        Scanner console = new Scanner(System.in);
-
+        Random ran =new Random();
         // describe the game
         System.out.println(game.toString());
 
         // This is just an example.
         System.out.println(game.getMessage());
 
-        int guess;
-
-        guess = ran.nextInt(game.getUpperBound());
+        int guess,max = game.getUpperBound(),min = 0;
 
         do {
-            Random rand = new Random();
-            System.out.println("Your answer? "+guess);
+            guess = ran.nextInt(max) + 0;
 
+            if (guess < min) guess = min + ((max - min) / 8);
 
+            System.out.println("Your answer? " + guess);
             boolean correct = game.guess(guess);
             System.out.println(game.getMessage());
 
             if (correct == true) break;
             if (correct == false) {
-                if (game.getMessage().contains("too small")) guess += 3;
-                if (game.getMessage().contains("too large")) guess -= 5;
+                if (game.getMessage().contains("large")) max = guess - 1;
+                if (game.getMessage().contains("small")) min = guess + 1;
             }
         } while (true);
 
