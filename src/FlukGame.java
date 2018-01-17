@@ -1,7 +1,8 @@
 import java.util.Random;
 
 /**
- * Game of guessing a secret number that have range 0 - upperbound that user set.
+ * Game of guessing a secret number that have range 0 - upperbound that user set.and this will class will return the solution of
+ * the number that user guess compare with secrect number and show message "Too small" or "Too large".
  * @author Thanakrit Daowrueang.
  */
 

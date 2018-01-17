@@ -5,6 +5,13 @@ import java.util.Random;
  */
 public class GameSolver {
 
+    /**
+     * This play a numbergame automatically and return the solution of the secrect number.
+     * The NumberGame should return the phrase that contain "large" and "small",for good solution.
+     * @param game is an object to solve in this class.
+     * @return
+     */
+
     public int play (NumberGame game){
 
         Random ran =new Random();
@@ -19,11 +26,11 @@ public class GameSolver {
         do {
             guess = ran.nextInt(max) + 0;
 
-            if (guess < min) guess = min + ((max - min) / 8);
+            if (guess < min) guess = min + ((max - min) / 2);
 
-            System.out.println("Your answer? " + guess);
+//            System.out.println("Your answer? " + guess);
             boolean correct = game.guess(guess);
-            System.out.println(game.getMessage());
+//            System.out.println(game.getMessage());
 
             if (correct == true) break;
             if (correct == false) {
