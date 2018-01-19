@@ -32,10 +32,16 @@ public class GameSolver {
             boolean correct = game.guess(guess);
 //            System.out.println(game.getMessage());
 
-            if (correct == true) break;
-            if (correct == false) {
+            if (correct == true){
+                break;
+            }
+            else{
                 if (game.getMessage().contains("large")) max = guess - 1;
-                if (game.getMessage().contains("small")) min = guess + 1;
+                else if (game.getMessage().contains("small")) min = guess + 1;
+                else {
+                    System.out.println("System error terminated");
+                    System.exit(1);
+                }
             }
         } while (true);
 
