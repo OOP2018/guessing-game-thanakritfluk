@@ -13,25 +13,10 @@ public class GameSolver {
      */
 
     public int play (NumberGame game){
-
-        Random ran =new Random();
-        // describe the game
-        System.out.println(game.toString());
-
-        // This is just an example.
-        System.out.println(game.getMessage());
-
         int guess,max = game.getUpperBound(),min = 0;
-
         do {
-            guess = ran.nextInt(max) + 0;
-
-            if (guess < min) guess = min + ((max - min) / 2);
-
-//            System.out.println("Your answer? " + guess);
+            guess = min + ((max - min) / 2);
             boolean correct = game.guess(guess);
-//            System.out.println(game.getMessage());
-
             if (correct == true){
                 break;
             }
@@ -43,8 +28,8 @@ public class GameSolver {
                     System.exit(1);
                 }
             }
-        } while (true);
 
+        } while (true);
        return guess;
 
     }

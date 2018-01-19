@@ -12,7 +12,7 @@ public class FlukGame extends NumberGame {
     private int guesse = 0;
 
     /**
-     *
+     * This method set the value of any variable.
      * @param upperBound is the max value of that can guessing.
      */
 
@@ -24,7 +24,7 @@ public class FlukGame extends NumberGame {
     }
 
     /**
-     *
+     * This method use to solve the guess number is equals secret number or not.
      * @param number is the number that user guess.
      * @return your number guess right or not
      */
