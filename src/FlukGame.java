@@ -9,7 +9,7 @@ import java.util.Random;
 public class FlukGame extends NumberGame {
     private int upperBound;
     private int secret;
-    private int guesse;
+    private int guesse = 0;
 
     /**
      *
