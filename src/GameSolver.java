@@ -9,7 +9,7 @@ public class GameSolver {
      * This play a numbergame automatically and return the solution of the secrect number.
      * The NumberGame should return the phrase that contain "large" and "small",for good solution.
      * @param game is an object to solve in this class.
-     * @return
+     * @return result of the game
      */
 
     public int play (NumberGame game){
@@ -39,7 +39,7 @@ public class GameSolver {
             }
         } while (true);
 
-        return guess;
+       return guess;
 
     }
 }

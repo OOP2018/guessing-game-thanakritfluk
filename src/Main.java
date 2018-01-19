@@ -5,10 +5,11 @@
  * @author Thanakrit Daowrueang.
  */
 public class Main {
+
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 1210;
-		NumberGame game = new FlukGame(upperBound);
+		int upperBound = 1000000;
+		NumberGame game = new Ou(upperBound);
 		GameSolver ui = new GameSolver();
 		int solution = ui.play( game );
 
