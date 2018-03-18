@@ -1,4 +1,3 @@
-import java.util.Random;
 /**
  * Automatically find the secret to any NumberGame.
  * @author Thanakrit Daowrueang.

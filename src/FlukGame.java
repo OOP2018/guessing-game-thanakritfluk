@@ -40,6 +40,10 @@ public class FlukGame extends NumberGame {
         else return false;
     }
 
+    public int getSecret(){
+        return secret;
+    }
+
     @Override
     public int getUpperBound(){
         return upperBound;
