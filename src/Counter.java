@@ -23,4 +23,8 @@ public class Counter extends java.util.Observable {
 	public int getCount() {
 		return count;
 	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
 }

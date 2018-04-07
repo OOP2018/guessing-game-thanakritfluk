@@ -19,6 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Counter counter = new Counter();
+        SecretNumber secretNumber = new SecretNumber();
         try {
             URL url = getClass().getResource("GameUI.fxml");
             if (url == null) {
@@ -36,6 +37,7 @@ public class Main extends Application {
             // Dependency Injection:
             // Set the Counter object we want the view to update.
             controller.setCounter(counter);
+            controller.setSecret(secretNumber);
 
             // Build and show the scene
             Scene scene = new Scene(root);
@@ -48,6 +50,11 @@ public class Main extends Application {
             e.printStackTrace();
             return;
         }
+
+        ResultView resultView = new ResultView(secretNumber);
+        secretNumber.addObserver(resultView);
+        resultView.run();
+
         GuessTimeView guessTimeView = new GuessTimeView(counter);
 
         counter.addObserver(guessTimeView);
